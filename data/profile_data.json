@@ -1,0 +1,94 @@
+{
+  "candidate": {
+    "name": "Rehan Pratama",
+    "role": "Operator Produksi & Staff Manufaktur",
+    "location": "Kab. Bekasi, Jawa Barat",
+    "statusBadge": "Siap Bekerja",
+    "avatarUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCVabSOxALSWOQD8E71tZkb5gdYRmz-mvLSCf08YF97aKT5YC_2Pu4pKLXVNKd_TZV-FxINsRPZNIKb84x6dNy9KmJIDxhnTUuXstt-Eu8Sncw4wbQ7NJIDXyMYMdPQNMrYLgq2W2fnpJfKcgA73FdJzZ9Kt-LZKaejypurCdan7ER8Eiml3zVG34k4oULCOLPBhssYgkng7XmCx8-s0W-O2K79jRGFKLwPe46MCfYrl5HnKKAnyTJoUTVuLgPoxdNhrfMJymTY59uLcg",
+    "aboutMe": "Operator produksi berdedikasi tinggi dan teliti dengan pengalaman di industri manufaktur dan perakitan. Terbiasa bekerja dengan target output tinggi, mematuhi standar K3 (Keselamatan dan Kesehatan Kerja), 5R/5S, serta siap bekerja dengan sistem shift kerja maupun lembur terjadwal.",
+    "whatsappNumber": "6281234567890",
+    "whatsappDefaultMessage": "Halo Rehan, kami tertarik dengan profil Anda",
+    "cvPdfUrl": "https://example.com/cv-rehan-pratama.pdf"
+  },
+  "stats": {
+    "pengalaman": "3+ Tahun",
+    "kesiapan": "Shift 1,2,3",
+    "statusKerja": "Aktif"
+  },
+  "skills": [
+    {
+      "iconName": "verified",
+      "title": "Disiplin Kerja, K3 & 5R/5S",
+      "subtitle": "Standar K3 Manufaktur",
+      "level": "Tingkat Mahir",
+      "isExpert": true
+    },
+    {
+      "iconName": "precision_manufacturing",
+      "title": "Pengoperasian Mesin & Perakitan",
+      "subtitle": "Lini Fabrikasi & Assembly",
+      "level": "Tingkat Mahir",
+      "isExpert": true
+    },
+    {
+      "iconName": "fact_check",
+      "title": "Quality Control & Sortir Produk",
+      "subtitle": "Inspeksi Standar Mutu",
+      "level": "Kompeten",
+      "isExpert": false
+    }
+  ],
+  "supportingCompetencies": [
+    "Standar K3",
+    "Penerapan 5R/5S",
+    "Quality Control (QC)",
+    "SOP Manufaktur",
+    "Packing & Packaging",
+    "Bongkar Muat"
+  ],
+  "experiences": [
+    {
+      "period": "2026 — Sekarang",
+      "role": "Kenek Mobil Truk / Logistik Distribusi",
+      "company": "PT Pangan Lestari",
+      "description": "Bertanggung jawab dalam proses bongkar muat barang logistik pangan, memastikan keselamatan & keutuhan pengiriman ke outlet/tujuan, serta membantu pengemudi dalam operasional rute distribusi.",
+      "tags": [
+        "Distribusi Barang",
+        "Logistik"
+      ],
+      "isCurrent": true,
+      "dotColorHex": "#000000"
+    },
+    {
+      "period": "2024 — 2025",
+      "role": "Operator Produksi",
+      "company": "PT Daechang",
+      "description": "Mengoperasikan mesin dan peralatan lini produksi manufaktur, memastikan standar target output tercapai, menjaga kualitas hasil cetakan/komponen, serta menerapkan standar K3 dan 5R di area kerja.",
+      "tags": [
+        "Operasional Mesin",
+        "Quality Inspection"
+      ],
+      "isCurrent": false,
+      "dotColorHex": "#515F74"
+    },
+    {
+      "period": "2023 — 2024",
+      "role": "Helper Produksi & Packaging",
+      "company": "PT Yuto Packaging Indonesia",
+      "description": "Membantu operasional pengemasan dan penyortiran barang jadi, menyiapkan material kemasan di lini produksi, serta mendukung kelancaran alur packing sesuai instruksi kerja.",
+      "tags": [
+        "Helper Packaging",
+        "Sortir Material"
+      ],
+      "isCurrent": false,
+      "dotColorHex": "#76777D"
+    }
+  ],
+  "certification": {
+    "title": "Sertifikasi Kompetensi K3 & Operasional Manufaktur",
+    "issuer": "Lembaga Sertifikasi Profesi (LSP) / BNSP & Kemenaker",
+    "regNumber": "No. Reg: BNSP-MAN-2024-8842",
+    "badgeText": "Resmi & Valid",
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBtM-Rnvr0U3xPe470Tio1WpmYZbkIPQDQMc49cK5vYDK1r3hBVpUy5LTI_x9K7uuhruHsjwBY9PaadeY6Rr8BeyU35a188MoePYL_qGq2DnNR6iTYBTleBtZmZ1AjFwH2hP_Eg_-19sHtIBt2MMqIZkE-BH_DRKRPKWgIZePq-oHvFFnniv1PvkNiGc8kPYjizjHX4oRuaOLNjyDPjrttkmiUnjQ4DnV_9WNIWEIwVmhkOltDZXf8pdvTVbhyx9CrsrE2I5ffws7TAag"
+  }
+}
