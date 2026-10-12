@@ -14,7 +14,7 @@ abstract class CandidateInfo with _$CandidateInfo {
     required String aboutMe,
     required String whatsappNumber,
     required String whatsappDefaultMessage,
-    required String cvPdfUrl,
+    @Default('') String cvPdfUrl,
   }) = _CandidateInfo;
 
   factory CandidateInfo.fromJson(Map<String, dynamic> json) =>

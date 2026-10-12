@@ -560,113 +560,18 @@ class ActionButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: AppSpace.xs, bottom: AppSpace.sm),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          SizedBox(
-            height: 44,
-            child: FilledButton.icon(
-              onPressed: _openWhatsApp,
-              style: FilledButton.styleFrom(
-                backgroundColor: AppColors.primary,
-                foregroundColor: AppColors.onPrimary,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                textStyle: AppText.labelMd,
-              ),
-              icon: const Icon(Icons.chat_outlined, size: 19),
-              label: const Text('Hubungi Saya via WhatsApp'),
-            ),
+      child: SizedBox(
+        height: 44,
+        child: FilledButton.icon(
+          onPressed: _openWhatsApp,
+          style: FilledButton.styleFrom(
+            backgroundColor: AppColors.primary,
+            foregroundColor: AppColors.onPrimary,
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            textStyle: AppText.labelMd,
           ),
-          const SizedBox(height: 10),
-          DownloadCvButton(cvUrl: candidate.cvPdfUrl),
-        ],
-      ),
-    );
-  }
-}
-
-enum _DownloadState { idle, loading, done }
-
-class DownloadCvButton extends StatefulWidget {
-  const DownloadCvButton({super.key, required this.cvUrl});
-
-  final String cvUrl;
-
-  @override
-  State<DownloadCvButton> createState() => _DownloadCvButtonState();
-}
-
-class _DownloadCvButtonState extends State<DownloadCvButton> {
-  _DownloadState _state = _DownloadState.idle;
-
-  Future<void> _onPressed() async {
-    if (_state != _DownloadState.idle) return;
-    setState(() => _state = _DownloadState.loading);
-
-    // If valid safe URL (http/https), open or download
-    try {
-      if (widget.cvUrl.isNotEmpty) {
-        final uri = Uri.tryParse(widget.cvUrl);
-        if (uri != null && (uri.isScheme('https') || uri.isScheme('http'))) {
-          await launchUrl(uri, mode: LaunchMode.externalApplication);
-        }
-      }
-    } catch (_) {}
-
-    await Future.delayed(const Duration(milliseconds: 1000));
-    if (!mounted) return;
-    setState(() => _state = _DownloadState.done);
-    await Future.delayed(const Duration(milliseconds: 2400));
-    if (!mounted) return;
-    setState(() => _state = _DownloadState.idle);
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final (Widget icon, String label) = switch (_state) {
-      _DownloadState.idle => (
-          const Icon(Icons.download, size: 19),
-          'Unduh CV Lengkap (PDF)',
-        ),
-      _DownloadState.loading => (
-          const SizedBox(
-            width: 17,
-            height: 17,
-            child: CircularProgressIndicator(strokeWidth: 2, color: AppColors.onSurface),
-          ),
-          'Mengunduh Dokumen...',
-        ),
-      _DownloadState.done => (
-          const Icon(Icons.check_circle, size: 19, color: AppColors.green),
-          'CV Berhasil Diunduh!',
-        ),
-    };
-
-    return Container(
-      height: 44,
-      decoration: BoxDecoration(
-        color: AppColors.surfaceContainerLowest,
-        borderRadius: BorderRadius.circular(8),
-        boxShadow: shadowSm,
-      ),
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          key: const ValueKey('downloadCvBtn'),
-          borderRadius: BorderRadius.circular(8),
-          onTap: _onPressed,
-          child: AnimatedSwitcher(
-            duration: const Duration(milliseconds: 200),
-            child: Row(
-              key: ValueKey(_state),
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                icon,
-                const SizedBox(width: 8),
-                Text(label, style: AppText.labelMd),
-              ],
-            ),
-          ),
+          icon: const Icon(Icons.chat_outlined, size: 19),
+          label: const Text('Hubungi Saya via WhatsApp'),
         ),
       ),
     );

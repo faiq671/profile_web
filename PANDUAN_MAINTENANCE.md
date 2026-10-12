@@ -19,8 +19,7 @@ Buka file `profile_data.json`, lalu edit objek `"candidate"`:
   "avatarUrl": "https://...",
   "aboutMe": "Tuliskan deskripsi Tentang Saya di sini...",
   "whatsappNumber": "6281234567890",
-  "whatsappDefaultMessage": "Halo Rehan, kami tertarik dengan profil Anda",
-  "cvPdfUrl": "https://link-cv-anda.pdf"
+  "whatsappDefaultMessage": "Halo Rehan, kami tertarik dengan profil Anda"
 }
 ```
 

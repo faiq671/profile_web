@@ -16,7 +16,7 @@ _CandidateInfo _$CandidateInfoFromJson(Map<String, dynamic> json) =>
       aboutMe: json['aboutMe'] as String,
       whatsappNumber: json['whatsappNumber'] as String,
       whatsappDefaultMessage: json['whatsappDefaultMessage'] as String,
-      cvPdfUrl: json['cvPdfUrl'] as String,
+      cvPdfUrl: json['cvPdfUrl'] as String? ?? '',
     );
 
 Map<String, dynamic> _$CandidateInfoToJson(_CandidateInfo instance) =>

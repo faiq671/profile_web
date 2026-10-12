@@ -218,7 +218,7 @@ return $default(_that.name,_that.role,_that.location,_that.statusBadge,_that.ava
 @JsonSerializable()
 
 class _CandidateInfo implements CandidateInfo {
-  const _CandidateInfo({required this.name, required this.role, required this.location, required this.statusBadge, required this.avatarUrl, required this.aboutMe, required this.whatsappNumber, required this.whatsappDefaultMessage, required this.cvPdfUrl});
+  const _CandidateInfo({required this.name, required this.role, required this.location, required this.statusBadge, required this.avatarUrl, required this.aboutMe, required this.whatsappNumber, required this.whatsappDefaultMessage, this.cvPdfUrl = ''});
   factory _CandidateInfo.fromJson(Map<String, dynamic> json) => _$CandidateInfoFromJson(json);
 
 @override final  String name;
@@ -229,7 +229,7 @@ class _CandidateInfo implements CandidateInfo {
 @override final  String aboutMe;
 @override final  String whatsappNumber;
 @override final  String whatsappDefaultMessage;
-@override final  String cvPdfUrl;
+@override@JsonKey() final  String cvPdfUrl;
 
 /// Create a copy of CandidateInfo
 /// with the given fields replaced by the non-null parameter values.
