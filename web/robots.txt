@@ -1,0 +1,4 @@
+# Blokir seluruh search engine crawler (Google, Bing, Yahoo, Yandex, bot AI)
+# Halaman ini berstatus Unlisted (hanya untuk pengunjung yang memiliki link langsung)
+User-agent: *
+Disallow: /
