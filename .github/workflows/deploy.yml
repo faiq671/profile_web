@@ -1,9 +1,8 @@
 name: Deploy Flutter Web to GitHub Pages
 
+# Deploy dilakukan manual lewat tombol "Run workflow" di GitHub Actions jika Anda sudah siap.
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 permissions:
   contents: write

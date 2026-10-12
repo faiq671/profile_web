@@ -546,9 +546,14 @@ class ActionButtons extends StatelessWidget {
   final CandidateInfo candidate;
 
   Future<void> _openWhatsApp() async {
+    final cleanPhone =
+        candidate.whatsappNumber.replaceAll(RegExp(r'[^0-9+]'), '');
     final encodedMsg = Uri.encodeComponent(candidate.whatsappDefaultMessage);
-    final url = 'https://wa.me/${candidate.whatsappNumber}?text=$encodedMsg';
-    await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
+    final rawUrl = 'https://wa.me/$cleanPhone?text=$encodedMsg';
+    final uri = Uri.tryParse(rawUrl);
+    if (uri != null && (uri.isScheme('https') || uri.isScheme('http'))) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    }
   }
 
   @override
@@ -598,10 +603,13 @@ class _DownloadCvButtonState extends State<DownloadCvButton> {
     if (_state != _DownloadState.idle) return;
     setState(() => _state = _DownloadState.loading);
 
-    // If valid URL, can also open or download
+    // If valid safe URL (http/https), open or download
     try {
-      if (widget.cvUrl.isNotEmpty && widget.cvUrl.startsWith('http')) {
-        await launchUrl(Uri.parse(widget.cvUrl), mode: LaunchMode.externalApplication);
+      if (widget.cvUrl.isNotEmpty) {
+        final uri = Uri.tryParse(widget.cvUrl);
+        if (uri != null && (uri.isScheme('https') || uri.isScheme('http'))) {
+          await launchUrl(uri, mode: LaunchMode.externalApplication);
+        }
       }
     } catch (_) {}
 
